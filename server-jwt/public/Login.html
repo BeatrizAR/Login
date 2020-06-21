@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+        <style>
+            body {
+                background-color: rgb(63, 5, 90);
+            }
+            
+        </style>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="row" >
+                <div class="col-sm-4" ></div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="text-center">
+                            <strong>Iniciar Sesion</strong>
+                            </h3>
+                            <hr>
+                            <!--/login es la dirección a donde se mandan los datos-->
+                            <form method="POST" action="/login">
+                                <input type="email" name="email" id="email" class="form-control">
+                                <label for="email">Email</label>
+                                
+                                <input type="password" name="password" id="contrasena" class="form-control">
+                                <label for="contraseña">Contraseña</label>
+                                <hr>
+                            
+                                <button class="btn btn-dark" type="submit" onclick="iniciar()">Iniciar sesion</button>
+                            </form>        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+   
+    <script>
+    function iniciar(){
+        var correo = document.getElementById("email").value;
+        var contrasena = document.getElementById("contrasena").value;
+        console.log(correo+" "+contrasena);
+            
+        
+        if (correo == "" || contrasena == ""){
+            alert("Favor de llenar todos los campos");
+        }
+    }    
+
+    </script>
+
+    </body>
+
+</html>
